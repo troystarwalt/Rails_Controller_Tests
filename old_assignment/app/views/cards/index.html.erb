@@ -1,0 +1,21 @@
+<% @cards.each do |c| %>
+<p>
+
+	<div class="cards_list">
+		<p>Card Number: <%= c.number %></p>
+		<p>Card Type: <%= c.cardtype %></p>
+		<p>Expiration Month: <%= c.expires_month %></p>
+		<p>Expiration Year: <%= c.expires_year %></p>
+		<%= link_to "delete", card_path(c.id), method: :delete %>
+		<%= link_to "add to wallet",user_cards_path(card_id: c.id, user_id: 2), method: :post %>
+	</div>
+
+</p>
+
+<% end %> 
+
+
+<!-- Need to unharddocde  user_id using session[:user_id] -->
+
+<!-- user_id: session[:user_id] -->
+<!-- ? possibly user_card_path -->

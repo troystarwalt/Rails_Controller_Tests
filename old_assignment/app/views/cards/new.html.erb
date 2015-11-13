@@ -1,0 +1,22 @@
+<h1>Add Card</h1>
+
+<%= form_for @card do |c| %>
+<%= c.label :number  %>
+<%= c.text_field :number %>
+
+<%= c.label :cardtype  %>
+<%= c.text_field :cardtype %>
+
+<%= c.label :expires_month %>
+<%= c.text_field :expires_month %>
+
+<%= c.label :expires_year %>
+<%= c.text_field :expires_year %>
+
+<%= c.label :code  %>
+<%= c.text_field :code %>
+
+<%= c.submit :create %>
+
+<% end %>
+<p> <%= @current_user %> </p>

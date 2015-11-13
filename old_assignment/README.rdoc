@@ -1,0 +1,20 @@
+- [x] User
+    - [x] phone number in correct format
+    - [x] balance has to be above 0
+    - [] resources :user
+    		[] show.html.erb
+    		[] update.html.erb
+    		[] create.html.erb
+    		[] index.html.erb
+    		[] destroy.html.erb
+    		[] new.html.erb
+    		[] edit.html.erb
+- [ ] Card
+    - [ ] length of number is 15 or 16
+    - [x] Delete Card
+    - [x] View Cards
+- [ ] UserCard
+    - [x] create model
+    - [ ] share card with other users...
+        - [ ] from link
+        - [ ] let other users add card from a link

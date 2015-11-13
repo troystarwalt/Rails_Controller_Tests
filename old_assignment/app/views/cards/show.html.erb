@@ -1,0 +1,12 @@
+<p> Card Number: <%= @card.number %></p>
+<p> Card Type: <%= @card.cardtype %></p>
+<p> Expired Month: <%= @card.expires_month %></p>
+<p> Expired Year: <%= @card.expires_year %></p>
+<p> Card CVV: <%= @card.code %></p>
+
+<% if ! @ownership.nill? %>
+	<%= link_to("add to my wallet", user_cards_path(card_id: @card.id, user_id: 1), method: :post) %>
+<% else %>
+
+<%= link_to("remove from my wallet", user_card_path(card_id: @card.id, user_id: 1), method: :delete) %>
+<% end %>

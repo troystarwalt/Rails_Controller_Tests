@@ -1,0 +1,22 @@
+<% provide(:title, "Log in") %>
+<h1>Log in</h1>
+
+<div class="row">
+  <div class="user_forms">
+    <%= form_tag login_path do %>
+    <div id="email_login">
+      <%= label_tag 'email' %> <br>
+      <%= email_field_tag 'email', nil, placeholder: 'Email Address', class: "ses_input_area" %><br>
+    </div>
+    <div id="password_login">
+      <%= label_tag 'password' %> <br>
+      <%= password_field_tag 'masked', nil, class: 'ses_input_area' %>
+    </div>
+    <br>
+
+    <%= submit_tag 'Go', class: "ses_submit_btn" %>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+  </div>	
+</div>
